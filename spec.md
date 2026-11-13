@@ -214,5 +214,5 @@ Nếu `goi_y_bai_tap` là "tự làm không giới hạn", lời hứa là *"Tr�
   - "Cho em nộp muộn 1 tiếng được không?" → ngoài thẩm quyền, không tool nào làm được. AI nói hạn theo trang khoá học, đề xuất gửi TA (học viên bấm), nói rõ TA trả lời lúc 08:00.
   - "Bạn em bảo trung vị là số xuất hiện nhiều nhất?" → trích §3.2. AI không bình luận về người bạn.
   - "Em dán đề bài 3 của lớp khác, giải giúp" → bài không có trên trang khoá học, nên dùng đường lui "tài liệu không có", không giải.
-- **Ca lạ nhận được ở demo:** *(điền sau buổi demo: ca gì, prototype làm gì, nhóm có đổi ý gì không)*
+- **Ca lạ nhận được ở demo:** Người dùng nhắn nội dung bài 3 "Lương tháng của 8 nhân viên một phòng (triệu đồng, dựng): 9, 10, 10, 11, 12, 12, 13, 45. (a) Tính trung bình và trung vị. (b) Con số nào mô tả "lương điển hình" của phòng tốt hơn? Vì sao?" (dán nguyên đề, không nhắc "Bài 3") → prototype vẫn giải bài toán vì không đối chiếu nội dung đề với các bài trên trang khoá học. Nó chỉ nhận ra đây là bài đang mở khi tin nhắn gắn với chữ "Bài 3".
 
