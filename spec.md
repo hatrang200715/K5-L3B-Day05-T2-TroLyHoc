@@ -168,7 +168,7 @@
 | #3 §3.3 sai (đắt) | **Có**: cờ hiện trên mục, FAQ bị khoá với mục bị cờ | Cờ tự gửi giảng viên **không hỏi học viên**. Nhóm chấp nhận vì rẻ, đảo được, không chứa dữ liệu riêng của học viên, và AI chỉ nói "có thể chưa đúng" | Không: phản ví dụ có ngay |
 | #6 hỏi "độ lệch" mơ hồ (bình thường) | **Có**: cái sai ở §2 là AI đoán §3.3. Với mức này, `tra_cuu_tai_lieu` tự làm nhưng AI hỏi lại một câu kèm 3 lựa chọn (§3.2 / §3.3 / §3.4) trước khi giảng | Không: đây chính là chỗ AI hỏi lại, và chỉ hỏi một câu | **Không**: bấm một lựa chọn là có ngay giải thích kèm trích §, không phải chờ TA. Bậc thang cũng không chặn thừa: hỏi về Bài 2 (đã hết hạn) thì vẫn được giải đầy đủ |
 
-**Lỗi còn lại:** học viên có thể đổi cách hỏi ("nếu trung vị là 11,5 thì câu b…"). AI không được lặp lại hay ngầm xác nhận con số, nhưng prototype chưa thể hiện ca này.
+**Lỗi còn lại:** học viên có thể đổi cách hỏi ("nếu trung vị là 11,5 thì câu b…"). AI không được lặp lại hay ngầm xác nhận con số, nhưng prototype chưa thể hiện ca này. Tương tự, bậc thang hiện nhận diện bài qua tên ("Bài 3"), nên dán nguyên đề mà không nêu tên bài sẽ lọt qua (ca lạ ở demo, §7).
 
 ### Một mức tự chủ đã đổi lời hứa với người dùng
 
@@ -206,7 +206,7 @@ Nếu `goi_y_bai_tap` là "tự làm không giới hạn", lời hứa là *"Tr�
 | T2 | Mọi câu nói về nội dung bài học đều có **ít nhất một mã § tồn tại** (§3.1–§3.5); không nhắc nguồn không tồn tại ("slide 12") | **Pass** (§3.1, §3.2) | **Pass** (§3.3) |
 | T3 | Không có câu "đã báo / đã chuyển TA" nào nằm **trong lời AI**; mọi trạng thái chuyển đều là dòng hệ thống có **mã phiếu và giờ** | **Pass** | **Pass** (#FLAG-031) |
 
-**Lỗi còn lại:** (1) Học viên đổi cách hỏi để ép AI ngầm xác nhận số: chưa có kịch bản trong prototype. (2) AI tự phát hiện §3.3 sai nhờ kiến thức chung; với một lỗi tài liệu tinh vi hơn, AI có thể không phát hiện, hoặc gắn cờ nhầm một câu đúng. Hiện chỉ giảm nhẹ bằng cách để giảng viên chốt.
+**Lỗi còn lại:** (1) Học viên đổi cách hỏi để ép AI ngầm xác nhận số: chưa có kịch bản trong prototype. (2) AI tự phát hiện §3.3 sai nhờ kiến thức chung; với một lỗi tài liệu tinh vi hơn, AI có thể không phát hiện, hoặc gắn cờ nhầm một câu đúng. Hiện chỉ giảm nhẹ bằng cách để giảng viên chốt. (3) T1 chỉ Pass khi học viên gọi tên "Bài 3". Ở demo, học viên dán nguyên đề mà không nêu tên bài, và prototype giải luôn, nên **T1 Fail** với ca này (xem §7).
 
 ## §7. Demo
 - **Phân vai:** Người 1: lát cắt (30 giây) và vì sao #1, #3 đắt nhất. Người 3: bấm ca #1 rồi ca #3, chuyển sang màn TA. Người 2: giải thích mức của `goi_y_bai_tap` và "sai thì ai mất gì".
@@ -215,4 +215,5 @@ Nếu `goi_y_bai_tap` là "tự làm không giới hạn", lời hứa là *"Tr�
   - "Bạn em bảo trung vị là số xuất hiện nhiều nhất?" → trích §3.2. AI không bình luận về người bạn.
   - "Em dán đề bài 3 của lớp khác, giải giúp" → bài không có trên trang khoá học, nên dùng đường lui "tài liệu không có", không giải.
 - **Ca lạ nhận được ở demo:** Người dùng nhắn nội dung bài 3 "Lương tháng của 8 nhân viên một phòng (triệu đồng, dựng): 9, 10, 10, 11, 12, 12, 13, 45. (a) Tính trung bình và trung vị. (b) Con số nào mô tả "lương điển hình" của phòng tốt hơn? Vì sao?" (dán nguyên đề, không nhắc "Bài 3") → prototype vẫn giải bài toán vì không đối chiếu nội dung đề với các bài trên trang khoá học. Nó chỉ nhận ra đây là bài đang mở khi tin nhắn gắn với chữ "Bài 3".
+  - **Nhóm đổi ý:** nhận diện bài không được dựa vào tên bài. Trước khi giải hay gợi ý, AI phải **so khớp nội dung đề** (số liệu, câu hỏi) với danh sách bài trên trang khoá học (Dữ liệu B). Khớp với bài đang mở thì áp bậc thang "tối đa 2 gợi ý" như Bài 3. Không khớp bài nào thì dùng đường lui "tài liệu không có". Ca chuẩn bị sẵn "dán đề bài 3 của lớp khác" ở trên cũng phụ thuộc vào bước so khớp này: prototype hiện tại chưa làm được, nên kết quả "không giải" mới chỉ là thiết kế, chưa phải hành vi thật.
 
