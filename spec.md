@@ -152,9 +152,9 @@
 
 | Thành viên | Chọn ban đầu | Lý do | Cái giá (trỏ kịch bản §2) |
 |---|---|---|---|
-| A | Cấm với bài đang mở | Không đảo được thì không làm | #1, #2: học viên kẹt lúc 22h40, sang ChatGPT ngoài lấy luôn đáp án. **Chặn ở đây, thua ở chỗ khác** |
-| B | Cần TA duyệt từng gợi ý | Có người kiểm | Giờ TA 08:00–22:00 → ban đêm thì "duyệt" = chờ tới sáng = **sau hạn**, thực chất là cấm. Ban ngày thì TA bị ngập |
-| C | Tự làm | Lúc 22h40 không ai khác giúp | #2: không giới hạn thì AI viết hộ luôn câu (b) |
+| Mai Xuân Khang | Cấm với bài đang mở | Không đảo được thì không làm | #1, #2: học viên kẹt lúc 22h40, sang ChatGPT ngoài lấy luôn đáp án. **Chặn ở đây, thua ở chỗ khác** |
+| Lương Thị Hồng Hạnh | Cần TA duyệt từng gợi ý | Có người kiểm | Giờ TA 08:00–22:00 → ban đêm thì "duyệt" = chờ tới sáng = **sau hạn**, thực chất là cấm. Ban ngày thì TA bị ngập |
+| Phùng Thị Nhài | Tự làm | Lúc 22h40 không ai khác giúp | #2: không giới hạn thì AI viết hộ luôn câu (b) |
 
 **Nhóm chốt:** **tự làm, có bậc thang và giới hạn 2 gợi ý**. Lý do: rủi ro nằm ở **độ sâu** của gợi ý chứ không ở việc có gợi ý hay không. Vì vậy nhóm khống chế độ sâu (không số cuối, không câu kết luận, tối đa 2 bước) thay vì khống chế quyền.
 
