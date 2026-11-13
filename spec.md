@@ -180,6 +180,14 @@ Nếu `goi_y_bai_tap` là "tự làm không giới hạn", lời hứa là *"Tr�
 - **2 màn hình:** (1) Học viên: chat + bảng bối cảnh. (2) TA / Giảng viên: hàng chờ câu hỏi, cờ tài liệu, nháp FAQ chờ duyệt (phần bonus của track).
 - **Ca khó bấm qua được:** #1 (Bài 3 đang mở lúc 22h40) và #3 (tài liệu §3.3 sai). Có thêm #4 đến #8, một câu hỏi về Bài 2 đã hết hạn (để thấy bậc thang "giải đầy đủ") và đường lui cho ca lạ.
 
+### Cách mở và chạy lại demo
+
+1. Tải repo về máy, mở [prototype/index.html](prototype/index.html) bằng trình duyệt; không cần cài thư viện hay khởi động máy chủ.
+2. Ở **Màn học viên**, chọn nút ca #1 hoặc ca #3 để xem luồng tương ứng. Chuyển sang **Màn TA / Giảng viên** để xem phiếu đã gửi hoặc cờ tài liệu.
+3. Bấm **Làm lại** trước mỗi lượt demo độc lập để xoá hội thoại, số lượt gợi ý, phiếu TA, cờ tài liệu, nháp FAQ và phản hồi của lượt trước.
+
+**Giới hạn khi trải nghiệm:** trạng thái chỉ lưu trong bộ nhớ của trang, tải lại trang sẽ mất dữ liệu. Các thao tác gửi TA, gắn cờ và duyệt FAQ chỉ mô phỏng trong trình duyệt, không gửi thông báo cho người thật. Đồng hồ và hạn nộp là bối cảnh cố định của demo, không tự thay đổi theo thời gian thực.
+
 **Ảnh đánh số** *(chụp `prototype/anh-1-hoc-vien.png`, `prototype/anh-2-TA.png`; các số ①–⑨ đã in sẵn trên giao diện, bật/tắt bằng nút "Số đánh dấu")*
 
 | Số | Thể hiện gì | Nguyên tắc | Mức tự chủ |
